@@ -42,6 +42,12 @@ body {
   font-size: 1rem;
 }
 
+#name{
+    display: block;
+    font-size: 2.6rem;
+    margin: 20px 0 0 20px;
+}
+
 .login button {
   width: 100%;
   padding: 0.9rem;
@@ -130,7 +136,7 @@ nav {
   background-color: #000;
   color: #fff;
   font-size: 2rem;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;

@@ -7,6 +7,7 @@ const addTaskBtn = document.getElementById("addTaskBtn");
 const taskModal = document.getElementById("taskInputContainer");
 const newTaskInput = document.getElementById("newTaskInput");
 const saveTaskBtn = document.getElementById("saveTaskBtn");
+const userName = document.querySelector('#name');
 
 let accounts = JSON.parse(localStorage.getItem("accounts")) || accountsData;
 let currentUser = JSON.parse(localStorage.getItem("currentUser")) || null;
@@ -40,6 +41,8 @@ function renderTasks() {
     document.getElementById("completedTasks").innerText = completed;
     document.getElementById("pendingTasks").innerText = pending;
     document.getElementById("failedTasks").innerText = failed;
+
+    userName.textContent = currentUser.name;
 
     taskList.innerHTML = "";
     currentUser.tasks.forEach((task) => {
